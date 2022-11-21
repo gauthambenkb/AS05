@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://bootswatch.com/3/darkly/bootstrap.min.css">
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-12 text-center">
+            <strong>{{message}}</strong>
+        </div>
+
+        <h2>Demos <a href="/products/add" class="btn btn-success pull-right">Add Product</a></h2>
+        <hr />
+
+        <p>
+        <div class="table-responsive">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>Product&nbsp;ID</th>
+                        <th>Title</th>
+                        <th>Product&nbsp;Date</th>
+                        <th>Category</th>
+                        <th>Published</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each products}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{title}}</td>
+                        <td>{{postDate}}</td>
+                        <td><a href="/demos?category={{category}}">{{category}}</a></td>
+                        <td>{{published}}</td>
+                        <td><a href="/demos/delete/{{id}}" class="btn btn-danger">Remove</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+        </p>
+
+
+    </div>
+</div>
